@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content {
+    padding: 0.5em;
+}
+
+/*HEADER*/
+header {
+    background-color: greenyellow;
+}
+
+header h1 {
+    margin: auto;
+    padding: 0.75em;
+}
+
+header h1 a {
+    color: black;
+    text-decoration: none;
+}
+
+/*NAVIGATION BAR*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    padding: 1em 2em;
+    color: white;
+    text-decoration: none;
+}
+
+/*BOOK LIST (SELECT)*/
+.book-list-links {
+    margin-bottom: 1em;
+}
+
+/*FOOTER*/
+footer {
+    background-color: green;
+}
+
+footer p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+/*TEXT COLORS*/
+.red-text {
+    color: red;
+}
+
+.yellow-text {
+    color:orange;
+}
+
+.green-text{
+    color: green;
+}
