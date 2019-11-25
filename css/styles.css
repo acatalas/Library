@@ -1,19 +1,70 @@
+:root {
+    --main-color: #1E0F0A;
+    --secondary-color: #412116;
+    --secondary-color-dark:#1E0F0A;
+    --color-light: white;
+    --text-color: #111111;
+    --color-accent: rgb(141, 141, 141);
+  }
+
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--color-light) ;
+    overflow: overlay;
 }
 
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a, p, label, h1, h2, h3, h4, h5 {
+    color: var(--text-color);
+}
+
+h2 {
+    margin: 0;
 }
 
 .content {
-    padding: 0.5em;
+    padding: 1em 2em;
 }
+
+.separator {
+    background-color: var(--main-color);
+    height: 2em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.m0 {
+    margin: 0 !important;
+}
+
+/*SCROLL BAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 20px;
+}
+
 
 /*HEADER*/
 header {
-    background-color: greenyellow;
+    background-color: var(--secondary-color);
 }
 
 header h1 {
@@ -22,7 +73,7 @@ header h1 {
 }
 
 header h1 a {
-    color: black;
+    color: var(--color-light);
     text-decoration: none;
 }
 
@@ -32,14 +83,14 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: green;
+    background-color: var(--main-color);
 }
 
 nav ul li {
     float: left;
 }
 
-nav li a {
+nav li a, nav li span {
     display: block;
     text-align: center;
     padding: 1em 2em;
@@ -47,19 +98,163 @@ nav li a {
     text-decoration: none;
 }
 
+.nav-item-right {
+    float: right;
+}
+
+/**/
+#search-box {
+    background-image: url("/library/img/library.jpg");
+    background-position: center;
+    height: 15em;
+}
+
+#search-box form {
+    position: absolute;
+    left: 5%;
+    top: 12.5em;
+    background-color: var(--color-light);
+    padding: 2em;
+    border-radius:10px ;
+    display: inline-block;
+}
+
+#search-box label {
+    display: block;
+    width: 100%;
+}
+
+#search-box input[type=submit]{
+    margin: 0;
+}
+
+/*FORM CENTER*/
+.form-center{
+    width: 45%;
+    margin: auto;
+}
+
+.form-center h2 {
+    text-align: center;
+}
+
+.form-center label {
+    width: 20%;
+    display: inline-block;
+}
+
+.form-center .row {
+    margin-bottom: 0.5em ;
+}
+
+.form-center input[type=text], 
+.form-center input[type=password], 
+.form-center input[type=email]{
+    width: 70%;
+}
+
+.form-center input[type=submit]{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-center .input-error {
+    margin: 0.25em 0 1em 9em;
+    font-size: 0.8em;
+}
+
+/*FORM LEFT*/
+.form-left input[type=text], 
+.form-left input[type=password], 
+.form-left input[type=email]{
+    width: 30vw;
+}
+
+.form-left select {
+    width: 4em;
+    margin-right: 4em;
+}
+
+.form-left label {
+    width: 6em;
+    display: inline-block;
+}
+
+.form-left .input-error {
+    margin: 0.25em 0 1em 7.5em;
+    font-size: 0.8em;
+}
+
+/*FORM ALL*/
+
+input[type=text], input[type=password], input[type=email], input[type=date] {
+    padding: 0.5em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+select {
+    padding: 0.25em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+input[type=submit]{
+    font-size: 1em ;
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 0.5em 1.25em;
+    border-radius: 10px;
+    border: 0;
+    border-bottom: 3px solid var(--secondary-color-dark);
+    margin-top: 1em;
+}
+
+form {
+    margin-top: 1.5em;
+}
+
 /*BOOK LIST (SELECT)*/
-.book-list-links {
-    margin-bottom: 1em;
+.book-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.book {
+    width: 30%;
+    text-align: center;
+    margin: 0.5em;
+}
+
+.book p {
+    margin: 0.5em 0;
+}
+
+.book img {
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
 }
 
 /*FOOTER*/
 footer {
-    background-color: green;
+    background-color: var(--main-color);
 }
 
 footer p {
     margin: 0;
     padding: 0.5em;
+    color: var(--color-light);
 }
 
 /*TEXT COLORS*/

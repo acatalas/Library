@@ -1,14 +1,8 @@
 <?php
-echo $_GET['id'];
 if(isset($_GET['id'])){
-    
-    include('./db_connect.php');
-    $sql_book_delete = "DELETE FROM book
-       WHERE book_id = {$_GET['id']}";
-    if (!mysqli_query($conn, $sql_book_delete)) {
-        echo 'query error: ' . mysqli_error($conn);
-    } 
-    mysqli_close($conn);
+    include($_SERVER['DOCUMENT_ROOT'] . '/library/controller/book_controller.php');
+    $bookController = new BookController();
+    $bookController->deleteBook($_GET['id']);
 }
-header("Location: /library/index.php");
+header('Location: '. $_SERVER['DOCUMENT_ROOT'] . '/library/index.php');
 ?>
