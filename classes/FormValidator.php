@@ -18,7 +18,9 @@
 
         public function validateForm(){
             foreach($this->fields as $field){
-                
+                foreach($field->validations as $validation){
+                    $this->validationFunctions[$validation]($field->fieldName, $field->fieldValue)
+                }
             }
         }
 
@@ -29,9 +31,9 @@
     }
 
     class FormField{
-        private $fieldName;
-        private $fieldValue;
-        private $validations;
+        public $fieldName;
+        public $fieldValue;
+        public $validations;
 
         public function __construct($fieldName, $fieldValue, $validations)
         {

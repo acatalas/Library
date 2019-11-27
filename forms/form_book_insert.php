@@ -143,9 +143,9 @@ function isValidISBN(string $isbn)
     //$BookValidator = new BookValidator($_POST);
     //echo "P";
     //print_r($BookValidator->validateForm());
-    $fields = new FormField('name', 'Alejandra', [FormValidator::$REQUIRED]);
+    //$fields = new FormField('name', 'Alejandra', [FormValidator::$REQUIRED]);
 
-    $formValidator = new FormValidator($fields);
+    //$formValidator = new FormValidator($fields);
 
     if(!empty($_FILES['image']['name'])){
         $fileName = uniqid(rand(), true) . '.' . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
